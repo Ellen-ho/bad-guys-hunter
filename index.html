@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BadGuysHunter</title>
+  <!-- 載入第三方資源 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- 自己的 CSS -->
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+    <a class="navbar-brand" href="index.html">
+      <img src="https://cdn0.iconfinder.com/data/icons/home-security-2/45/security-06-512.png">
+      BadGuysHunter
+    </a>
+  </nav>
+  <div id="banner">
+    <span class="main-slogan">
+      Terminate International Crimes Together
+    </span>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <!-- 篩選設定區 -->
+      <div id="filter-condition" class="col-lg-3 pt-2 pb-2">
+        <div class="colume justify-content-start align-item-start">
+          <h5>Filter criteria</h5>
+          <!-- Search Bar -->
+          <form id="search-form">
+            <div class="form-group">
+              <label for="name" class="font-weight-bold">Name</label>
+              <input type="text" id="search-input" class="form-control mb-2 mr-sm-2" placeholder="Search name..." />
+            </div>
+            <div id="gender-group" class="form-group">
+              <div>
+                <label for="gender" class="font-weight-bold">Gender</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="gender-all" value="all" checked>
+                <label class="form-check-label" for="gender-all">
+                  All
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="gender-male" value="male">
+                <label class="form-check-label" for="gender-male">
+                  Male
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="gender-demale" value="female">
+                <label class="form-check-label" for="gender-demale">
+                  Female
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary mb-2" id="search-submit-button">
+                Search
+              </button>
+              <button type="reset" class="btn btn-secondary mb-2" id="search-reset-button">
+                Reset
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-9 pl-3">
+        <div class="row justify-content-start mb-1">
+          <!-- 切換顯示模式 -->
+          <div id="show-mode">
+            <i id="card-mode" class="btn btn-light fa fa-th" aria-hidden="true"></i>
+            <i id="list-mode" class="btn btn-light fa fa-bars" aria-hidden="true"></i>
+          </div>
+        </div>
+        <!-- 人員清單 -->
+        <div id="people-list">
+          <!-- People List -->
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center mt-3">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination"></ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- 載入第三方資源 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <!-- 自己的JS -->
+    <script src="index.js"></script>
+</body>
+
+</html>
